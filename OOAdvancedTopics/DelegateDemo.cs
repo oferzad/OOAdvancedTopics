@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,8 +58,21 @@ a.	בעיקר על מנת להעביר הפניה לפעולה כפרמטר לפ
             Func<int, int, int> myKuku = Kuku;
             #endregion
 
+            Func<int, int, int> dd = (a,b) => (a + b);
+            //string s = "fff fff ff";
+            //s.WordCount();
         }
-
+        
     }
+
+    static class ext
+    {
+        public static int WordCount(this string str)
+        {
+            return str.Split(new char[] { ' ', '.', '?' },
+                             StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+    }
+    
     
 }
