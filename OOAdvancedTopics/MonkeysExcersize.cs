@@ -264,7 +264,7 @@ namespace OOAdvancedTopics
             return m != null;
         }
 
-        Func<>
+      
     }
     
 }
